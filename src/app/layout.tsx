@@ -24,6 +24,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://esc-site-psi.vercel.app"),
   title: "Emotional Support Chicken — Certified Poultry Comfort",
   description:
     "Certified emotional support poultry for the modern, overwhelmed adult. Personalized chicken-human matching, certification packages, and tiny therapeutic vests.",
@@ -47,6 +48,7 @@ export const metadata: Metadata = {
     title: "Emotional Support Chicken",
     description:
       "Certified emotional support poultry. Tiny vests included.",
+    images: ["/images/og-image.webp"],
   },
   robots: "index, follow",
 };
