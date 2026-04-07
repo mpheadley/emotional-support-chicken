@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "./components/LenisProvider";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -63,8 +64,10 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${dmSans.variable} ${dancingScript.variable} font-body antialiased`}
       >
-        <a href="#main-content" className="skip-link">Skip to main content</a>
-        {children}
+        <LenisProvider>
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          {children}
+        </LenisProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
